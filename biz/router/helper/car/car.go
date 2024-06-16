@@ -16,4 +16,12 @@ import (
 // Register register routes based on the IDL 'api.${HTTP Method}' annotation.
 func Register(r *server.Hertz) {
 
+	root := r.Group("/", rootMw()...)
+	{
+		_v1 := root.Group("/v1", _v1Mw()...)
+		{
+			_car := _v1.Group("/car", _carMw()...)
+			_car.GET("/get_all", append(_getallcarsMw(), car.GetAllCars)...)
+		}
+	}
 }

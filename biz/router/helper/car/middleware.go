@@ -5,3 +5,28 @@ package car
 import (
 	"github.com/cloudwego/hertz/pkg/app"
 )
+
+func rootMw() []app.HandlerFunc {
+	// your code...
+	return nil
+}
+
+func _v1Mw() []app.HandlerFunc {
+	// your code...
+	return nil
+}
+
+func _carMw() []app.HandlerFunc {
+	// your code...
+	return nil
+}
+
+func _getallcarbasesMw() []app.HandlerFunc {
+	// your code...
+	return nil
+}
+
+func _getallcarsMw() []app.HandlerFunc {
+	// your code...
+	return nil
+}
